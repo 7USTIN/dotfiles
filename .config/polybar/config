@@ -1,0 +1,99 @@
+[bar/bar-main]
+
+monitor = HDMI-0
+override-redirect = true
+wm-restack = bspwm
+
+bottom = false
+fixed-center = true
+height = 16
+width = 100%
+offset-y = 8
+padding = 3
+
+background = #151515
+foreground = #b5b4c9
+
+font-0 = "JetBrainsMono:style=Bold:pixelsize=8;2:antialias=false"
+font-1 = "Siji:size=12;2:antialias=false"
+
+modules-left = date
+modules-right = cpu memory temperature pulseaudio
+modules-center = bspwm
+module-margin = 2
+
+;------------------
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %d-%m-%Y%
+time = %H:%M
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S %A, %d %B %Y
+
+format =  <label>
+label = %time%
+
+;------------------
+
+[module/temperature]
+type = internal/temperature
+interval = 1
+thermal-zone = 0
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input
+warn-temperature = 70
+format = <label>
+format-warn = <label-warn>
+label =  %temperature-c%
+label-warn =  %temperature-c%
+
+;------------------
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+format = <label>
+label =  %percentage%%
+
+;------------------
+
+[module/memory]
+type = internal/memory
+interval = 1
+format = <label>
+label =  %gb_used%
+
+;------------------
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+format = <label-volume>
+label-volume =  %percentage%%
+label-muted =
+click-right = pavucontrol & pulseaudio --check & pulseaudio -D
+
+;------------------
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+format = <label-state> <label-mode>
+label-focused = 
+label-focused-padding = 1
+label-occupied = 
+label-occupied-padding = 1
+label-occupied-foreground = #5e5c80
+label-empty = 
+label-empty-padding = 1
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
+
+;------------------
+
+[bar/bar-secondary]
+
+inherit = bar/bar-main
+monitor = DVI-D-0
+

@@ -1,0 +1,29 @@
+{
+    "name": "insomnia-plugin-nord-theme",
+    "version": "1.0.1",
+    "author": {
+        "name": "xasx",
+        "email": "as.maps@gmail.com"
+    },
+    "description": "Nord themes for Insomnia",
+    "homepage": "https://github.com/xasx/insomnia-plugin-nord-theme",
+    "license": "MIT",
+    "main": "plugin.js",
+    "insomnia": {
+        "name": "nord-theme",
+        "description": "Nord theme by arcticicestudio"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xasx/insomnia-plugin-nord-theme.git"
+    },
+    "bugs": {
+        "url": "https://github.com/xasx/insomnia-plugin-nord-theme/issues"
+    },
+    "keywords": [
+        "nord",
+        "theme",
+        "insomnia",
+        "insomnia-plugin"
+    ]
+}

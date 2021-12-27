@@ -1,0 +1,40 @@
+set recolor "true"
+set recolor-lightcolor "#1c1c1c"
+set recolor-darkcolor "#b5b4c9"
+set default-bg "#1c1c1c"
+set completion-bg "#1c1c1c"
+set completion-fg "#b5b4c9"
+set completion-group-bg "#1c1c1c"
+set completion-group-fg "#b5b4c9"
+set completion-highlight-bg "#1c1c1c"
+set completion-highlight-fg "#b5b4c9"
+set inputbar-bg "#1c1c1c"
+set inputbar-fg "#B5B4C9"
+set statusbar-bg "#1c1c1c"
+set statusbar-fg "#B5B4C9"
+set index-bg "#1c1c1c"
+set index-fg "#B5B4C9"
+set index-active-bg "#1c1c1c"
+set index-active-fg "#B5B4C9"
+set render-loading-bg "#1c1c1c"
+set render-loading-fg "#B5B4C9"
+set notification-bg "#1c1c1c"
+set notification-fg "#B5B4C9"
+set notification-error-bg "#1c1c1c"
+set notification-error-fg "#B5B4C9"
+set notification-warning-bg "#1c1c1c"
+set notification-warning-fg "#B5B4C9"
+set statusbar-basename true
+set font "JetBrainsMono 11"
+set selection-clipboard clipboard
+set window-height 900
+set window-width 1400
+set pages-per-row 1
+set highlight-color "#b5b4c9"
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+set scroll-step 80
+set scroll-page-aware "true"
+unmap r
+map r recolor
