@@ -9,7 +9,7 @@ Polybar taken over from u/mxcru3 with some slight modifications
 •                       | • 
 ------------------------|-----------------------
 **Distro**              | Arch
-**DE**                  | BSPWM
+**Window Manager**      | BSPWM
 **Editor**              | Neovim
 **Statusbar**           | Polybar
 **Compositor**          | Picom
